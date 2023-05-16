@@ -22,7 +22,7 @@ public class LoginUsuario {
     private String email;
     private String password;
     
-    @OneToOne(mappedBy = "usuario_id", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     private Usuario usuario;
     
     public LoginUsuario() {

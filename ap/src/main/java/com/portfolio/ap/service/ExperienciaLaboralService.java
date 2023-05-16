@@ -38,6 +38,15 @@ public class ExperienciaLaboralService implements IExperienciaLaboral {
     @Override
     public ExperienciaLaboral updateExperienciaLaboral(ExperienciaLaboral experienciaLaboral, Long experiencia_laboral_id){
         Optional<ExperienciaLaboral> localExperienciaLaboral = experienciaLaboralRepo.findById(experiencia_laboral_id); 
+        ExperienciaLaboral expLabi = null;
+        if (localExperienciaLaboral.isPresent()) {
+            expLabi = localExperienciaLaboral.get();
+            expLabi.setTitulo(experienciaLaboral.getTitulo());
+            expLabi.setDescripcion(experienciaLaboral.getDescripcion());
+            expLabi.setImagen(experienciaLaboral.getImagen());
+            expLabi = experienciaLaboralRepo.save(expLabi);
+        }
+        return expLabi;
     }
     
     

@@ -32,8 +32,7 @@ public class Usuario {
     private String descripcion;
     
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private LoginUsuario loginusuario;
+    private LoginUsuario loginUsuario;
     
     @OneToMany(mappedBy = "experiencia_laboral_id", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<ExperienciaLaboral> experienciaLaborallist;
