@@ -1,6 +1,5 @@
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\repository\EstudioRepository.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\repository\ProyectoRepository.java
-C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\controller\ExperienciaLaborarlController.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\interfaces\IProyecto.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\service\ProyectoService.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\interfaces\IExperienciaLaboral.java
@@ -20,6 +19,7 @@ C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\controller\EstudioController.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\service\SkillService.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\ApApplication.java
+C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\controller\ExperienciaLaboralController.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\interfaces\IUsuario.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\repository\LoginUsuarioRepository.java
 C:\Users\JuancitoAR\Desktop\Programacion\portfolio-BackEnd\ap\src\main\java\com\portfolio\ap\service\EstudioService.java

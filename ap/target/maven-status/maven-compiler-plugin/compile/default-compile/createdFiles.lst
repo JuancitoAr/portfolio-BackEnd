@@ -26,7 +26,7 @@ com\portfolio\ap\repository\ProyectoRepository.class
 com\portfolio\ap\service\SkillService.class
 com\portfolio\ap\model\ExperienciaLaboral.class
 com\portfolio\ap\service\ExperienciaLaboralService.class
+com\portfolio\ap\controller\ExperienciaLaboralController.class
 com\portfolio\ap\repository\LoginUsuarioRepository.class
 com\portfolio\ap\repository\SkillRepository.class
-com\portfolio\ap\controller\ExperienciaLaborarlController.class
 com\portfolio\ap\model\Usuario.class
