@@ -7,7 +7,6 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
@@ -21,8 +20,9 @@ import lombok.Setter;
 @Table(name = "usuarios")
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long usuario_id;
+    
     private String apellido;
     private String nombre;
     private String titulo;
@@ -45,17 +45,22 @@ public class Usuario {
     
     @OneToMany(mappedBy = "proyecto_id", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Proyecto> proyectolist;
-    
+
     public Usuario() {
     }
-    
-    public Usuario(Long usuario_id, String apellido, String nombre, String titulo, String foto, String descripcion) {
+
+    public Usuario(Long usuario_id, String apellido, String nombre, String titulo, String foto, String descripcion, LoginUsuario loginUsuario, List<ExperienciaLaboral> experienciaLaborallist, List<Estudio> estudiolist, List<Skill> skilllist, List<Proyecto> proyectolist) {
         this.usuario_id = usuario_id;
         this.apellido = apellido;
         this.nombre = nombre;
         this.titulo = titulo;
         this.foto = foto;
-        this.descripcion = descripcion;    
+        this.descripcion = descripcion;
+        this.loginUsuario = loginUsuario;
+        this.experienciaLaborallist = experienciaLaborallist;
+        this.estudiolist = estudiolist;
+        this.skilllist = skilllist;
+        this.proyectolist = proyectolist;
     }
     
 }

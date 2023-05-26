@@ -20,8 +20,9 @@ import lombok.Setter;
 public class ExperienciaLaboral {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long experiencia_laboral_id;
+    
     private String titulo;
     @Lob
     @Column(columnDefinition = "TEXT")
@@ -31,15 +32,16 @@ public class ExperienciaLaboral {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_usuario_id")
     private Usuario usuario;
-    
+
     public ExperienciaLaboral() {
     }
-    
-    public ExperienciaLaboral(Long experiencia_laboral_id, String titulo, String descripcion, String imagen) {
+
+    public ExperienciaLaboral(Long experiencia_laboral_id, String titulo, String descripcion, String imagen, Usuario usuario) {
         this.experiencia_laboral_id = experiencia_laboral_id;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.imagen = imagen;   
+        this.imagen = imagen;
+        this.usuario = usuario;
     }
     
 }

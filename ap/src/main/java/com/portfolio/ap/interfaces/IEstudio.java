@@ -14,10 +14,10 @@ public interface IEstudio {
     public void saveEstudio (Estudio estudio);
     
     // Elimina un estudio
-    public void deleteEstudio (Long id);
+    public void deleteEstudio (Long estudio_id);
     
     // Busca un estudio
-    public Estudio findEstudioById (Long id);
+    public Estudio findEstudioById (Long estudio_id);
     
     // Actualiza un estudio
     public Estudio updateEstudio(Estudio estudio, Long estudio_id);

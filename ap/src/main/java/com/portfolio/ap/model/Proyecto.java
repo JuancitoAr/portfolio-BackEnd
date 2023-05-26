@@ -21,8 +21,9 @@ import lombok.Setter;
 public class Proyecto {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long proyecto_id;
+    
     private String titulo;
     private String fecha_inicio;
     @Lob
@@ -34,17 +35,18 @@ public class Proyecto {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_usuario_id")
     private Usuario usuario;
-    
+
     public Proyecto() {
     }
-    
-    public Proyecto(Long proyecto_id, String titulo, String fecha_inicio, String descripcion, String link, String mascara) {
+
+    public Proyecto(Long proyecto_id, String titulo, String fecha_inicio, String descripcion, String link, String mascara, Usuario usuario) {
         this.proyecto_id = proyecto_id;
         this.titulo = titulo;
         this.fecha_inicio = fecha_inicio;
         this.descripcion = descripcion;
         this.link = link;
         this.mascara = mascara;
+        this.usuario = usuario;
     }
     
 }

@@ -16,22 +16,25 @@ import lombok.Setter;
 @Entity
 @Table(name = "login_usuarios")
 public class LoginUsuario {
+    
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long login_usuario_id;
+    
     private String email;
     private String password;
     
     @OneToOne(fetch = FetchType.LAZY)
     private Usuario usuario;
-    
+
     public LoginUsuario() {
     }
-    
-    public LoginUsuario(Long login_usuario_id, String email, String password){
+
+    public LoginUsuario(Long login_usuario_id, String email, String password, Usuario usuario) {
         this.login_usuario_id = login_usuario_id;
         this.email = email;
         this.password = password;
+        this.usuario = usuario;
     }
     
 }

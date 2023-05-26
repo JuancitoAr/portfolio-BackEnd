@@ -3,51 +3,50 @@ package com.portfolio.ap.service;
 
 import com.portfolio.ap.interfaces.IExperienciaLaboral;
 import com.portfolio.ap.model.ExperienciaLaboral;
-import com.portfolio.ap.repository.ExperienciaLaboralRepo;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.portfolio.ap.repository.ExperienciaLaboralRepository;
 
 @Service
 public class ExperienciaLaboralService implements IExperienciaLaboral {
-    
+
     @Autowired
-    public ExperienciaLaboralRepo experienciaLaboralRepo;
+    public ExperienciaLaboralRepository experienciaLaboralRepo;
     
     @Override
-    public List<ExperienciaLaboral> getExperienciasLaborales (){
+    public List<ExperienciaLaboral> getExperienciasLaborales() {
         return experienciaLaboralRepo.findAll();
     }
-    
+
     @Override
-    public void saveExperienciaLaboral (ExperienciaLaboral experienciaLaboral){
+    public void saveExperienciaLaboral(ExperienciaLaboral experienciaLaboral) {
         experienciaLaboralRepo.save(experienciaLaboral);
     }
     
     @Override
-    public void deleteExperienciaLaboral (Long id){
-        experienciaLaboralRepo.deleteById(id);
+    public void deleteExperienciaLaboral(Long experiencia_laboral_id) {
+       experienciaLaboralRepo.deleteById(experiencia_laboral_id);
     }
-    
+
     @Override
-    public ExperienciaLaboral findExperienciaLaboralById (Long id){
-        return experienciaLaboralRepo.findById(id).orElse(null);
+    public ExperienciaLaboral findExperienciaLaboralById(Long experiencia_laboral_id) {
+       return experienciaLaboralRepo.findById(experiencia_laboral_id).orElse(null);
     }
-    
+
     @Override
-    public ExperienciaLaboral updateExperienciaLaboral(ExperienciaLaboral experienciaLaboral, Long experiencia_laboral_id){
-        Optional<ExperienciaLaboral> localExperienciaLaboral = experienciaLaboralRepo.findById(experiencia_laboral_id); 
-        ExperienciaLaboral expLabi = null;
-        if (localExperienciaLaboral.isPresent()) {
-            expLabi = localExperienciaLaboral.get();
-            expLabi.setTitulo(experienciaLaboral.getTitulo());
-            expLabi.setDescripcion(experienciaLaboral.getDescripcion());
-            expLabi.setImagen(experienciaLaboral.getImagen());
-            expLabi = experienciaLaboralRepo.save(expLabi);
-        }
-        return expLabi;
-    }
-    
+    public ExperienciaLaboral updateExperienciaLaboral(ExperienciaLaboral experienciaLaboral, Long experiencia_laboral_id) {
+       Optional<ExperienciaLaboral> localExperienciaLaboral = experienciaLaboralRepo.findById(experiencia_laboral_id);
+       ExperienciaLaboral expLab = null;
+       if (localExperienciaLaboral.isPresent()){
+            expLab = localExperienciaLaboral.get();
+            expLab.setTitulo(experienciaLaboral.getTitulo());
+            expLab.setDescripcion(experienciaLaboral.getDescripcion());
+            expLab.setImagen(experienciaLaboral.getImagen());
+            expLab = experienciaLaboralRepo.save(expLab);
+       }
+       return expLab;
+    }    
     
 }

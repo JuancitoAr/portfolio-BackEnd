@@ -7,17 +7,17 @@ import java.util.List;
 
 public interface IExperienciaLaboral {
     
-    // Trae lista de experiencia laborales
+    // Trae lista de experiencias laborales
     public List<ExperienciaLaboral> getExperienciasLaborales ();
     
     // Añade una experiencia laboral
     public void saveExperienciaLaboral (ExperienciaLaboral experienciaLaboral);
     
     // Elimina una experiencia laboral
-    public void deleteExperienciaLaboral (Long id);
+    public void deleteExperienciaLaboral (Long experiencia_laboral_id);
     
     // Busca una experiencia laboral
-    public ExperienciaLaboral findExperienciaLaboralById (Long id);
+    public ExperienciaLaboral findExperienciaLaboralById (Long experiencia_laboral_id);
     
     // Actualiza una experiencia laboral
     public ExperienciaLaboral updateExperienciaLaboral(ExperienciaLaboral experienciaLaboral, Long experiencia_laboral_id);

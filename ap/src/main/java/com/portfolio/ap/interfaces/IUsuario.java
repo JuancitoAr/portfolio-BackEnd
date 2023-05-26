@@ -7,19 +7,19 @@ import java.util.List;
 
 public interface IUsuario {
     
-    // Trae lista de usuarios
+    // Trae lista de usuarios. Metodo para ser usado con Postman
     public List<Usuario> getUsuarios ();
     
-    // Añade un usuario
+    // Añade un usuario. Metodo para ser usado con Postman
     public void saveUsuario (Usuario usuario);
     
-    // Elimina un usuario
-    public void deleteUsuario (Long id);
+    // Elimina un usuario. Metodo para ser usado con Postman
+    public void deleteUsuario (Long usuario_id);
     
     // Busca un usuario
-    public Usuario findUsuarioById (Long id);
+    public Usuario findUsuarioById (Long usuario_id);
     
-    // Actualiza un usuario
+    // Actualiza un usuario.
     public Usuario updateUsuario(Usuario usuario, Long usuario_id);
     
 }
