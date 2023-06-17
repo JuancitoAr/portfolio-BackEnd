@@ -19,7 +19,13 @@ public interface IUsuario {
     // Busca un usuario
     public Usuario findUsuarioById (Long usuario_id);
     
-    // Actualiza un usuario.
+    // Actualiza un usuario completo.
     public Usuario updateUsuario(Usuario usuario, Long usuario_id);
+    
+    // Actualiza el perfil del usuario.
+    public Usuario updateUsuarioPerfil(Usuario usuario, Long usuario_id);
+    
+    // Actualiza el acerca del usuario.
+    public Usuario updateUsuarioAcerca(Usuario usuario, Long usuario_id);
     
 }

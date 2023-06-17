@@ -58,5 +58,18 @@ public class SkillService implements ISkill {
         }
         return skilll;
     }
+    
+    @Override
+    public Skill updateSkillCorta(Skill skill, Long skill_id) {
+        Optional<Skill> localSkill = skillRepo.findById(skill_id);
+        Skill skilll = null;
+        if (localSkill.isPresent()){
+            skilll = localSkill.get();
+            skilll.setHabilidad(skill.getHabilidad());
+            skilll.setNivel(skill.getNivel());
+            skilll = skillRepo.save(skilll);
+        }
+        return skilll;
+    }
 
 }

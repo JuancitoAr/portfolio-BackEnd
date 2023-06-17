@@ -18,8 +18,11 @@ public interface ISkill {
     // Busca una skill
     public Skill findSkillById (Long skill_id);
     
-    // Actualiza una skill
+    // Actualiza una skill completa
     public Skill updateSkill(Skill skill, Long skill_id);
+    
+    // Actualiza una skill sin pedir tipo de habilidad
+    public Skill updateSkillCorta(Skill skill, Long skill_id);
     
     // Trae una lista de las habilidades del tipo Duras
     public List<Skill> findAllfindAllHabilidadesDuras();

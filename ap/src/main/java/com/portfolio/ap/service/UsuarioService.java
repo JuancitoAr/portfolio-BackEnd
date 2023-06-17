@@ -52,4 +52,31 @@ public class UsuarioService implements IUsuario{
         return usuarioo;
     }
     
+    @Override
+    public Usuario updateUsuarioPerfil(Usuario usuario, Long usuario_id) {
+        Optional<Usuario> localUsuario = usuarioRepo.findById(usuario_id);
+        Usuario usuarioo = null;
+        if (localUsuario.isPresent()){
+            usuarioo = localUsuario.get();
+            usuarioo.setApellido(usuario.getApellido());
+            usuarioo.setNombre(usuario.getNombre());
+            usuarioo.setTitulo(usuario.getTitulo());
+            usuarioo.setFoto(usuario.getFoto());
+            usuarioo = usuarioRepo.save(usuarioo);     
+        }
+        return usuarioo;
+    }
+    
+    @Override
+    public Usuario updateUsuarioAcerca(Usuario usuario, Long usuario_id) {
+        Optional<Usuario> localUsuario = usuarioRepo.findById(usuario_id);
+        Usuario usuarioo = null;
+        if (localUsuario.isPresent()){
+            usuarioo = localUsuario.get();
+            usuarioo.setDescripcion(usuario.getDescripcion());
+            usuarioo = usuarioRepo.save(usuarioo);     
+        }
+        return usuarioo;
+    }
+    
 }

@@ -38,6 +38,16 @@ public class UsuarioController {
         return iUsu.updateUsuario(usuario, usuario_id);
     }
      
+    @PutMapping ("/editarperfil/{usuario_id}")
+     public Usuario editarUsuarioPerfil (@RequestBody Usuario usuario, @PathVariable Long usuario_id) {
+        return iUsu.updateUsuarioPerfil(usuario, usuario_id);
+    }
+     
+    @PutMapping ("/editaracerca/{usuario_id}")
+     public Usuario editarUsuarioAcerca (@RequestBody Usuario usuario, @PathVariable Long usuario_id) {
+        return iUsu.updateUsuarioAcerca(usuario, usuario_id);
+    }
+     
     @GetMapping("/id/{usuario_id}")
     public Usuario getUsuarioById (@PathVariable Long usuario_id) {
         return iUsu.findUsuarioById(usuario_id);

@@ -50,6 +50,11 @@ public class SkillController {
         return iSkill.updateSkill(skill, skill_id);
     }
      
+    @PutMapping ("/editarcorta/{skill_id}")
+     public Skill editarSkillCorta (@RequestBody Skill skill, @PathVariable Long skill_id) {
+        return iSkill.updateSkill(skill, skill_id);
+    }
+     
     @GetMapping("/id/{skill_id}")
     public Skill getSkillById (@PathVariable Long skill_id) {
         return iSkill.findSkillById(skill_id);
